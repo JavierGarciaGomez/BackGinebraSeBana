@@ -36,6 +36,8 @@ export const createPet = async (
         "El nombre de la mascota y la periodicidad del baño son necesarias"
       );
 
+    newPet.creationDate = new Date();
+
     const savedPet = await newPet.save();
 
     const updatedPet = await linkUserToPet(
